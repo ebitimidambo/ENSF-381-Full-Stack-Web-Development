@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Attempt Quiz - LMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
+        <h1>LMS - Learning Management System</h1>
+    </header>
+    <div>
+        <nav>
+            <a href="index.html">Homepage</a> | 
+            <a href="course_view.html">Courses</a> 
+        </nav>
+    </div>
+    <main id = "attemptquizmain">
+        <img src="banner.jpg" alt="Quiz Banner" style="width: 100%;">
+        <CourseDetails>
+            <h2>Course: Web Development</h2>
+            <p>Topic: HTML Basics</p>
+            <p>Last Date: February 10, 2025</p>
+            <p>Attempts Allowed: 1</p>
+        </CourseDetails>
+        
+        <Quiz>
+            <h3>Question 1</h3>
+            <p>What does HTML stand for?</p>
+            <Question>
+                <option1>
+                    <input type="radio" id="q1a" name="q1" value="Hyper Text Markup Language">
+                    <label for="q1a">Hyper Text Markup Language</label><br>
+                </option1>
+                <option2>
+                    <input type="radio" id="q1b" name="q1" value="Home Tool Markup Language">
+                    <label for="q1b">Home Tool Markup Language</label><br>
+                </option2>
+            </Question>
+            <button>Submit Answer</button>
+
+        
+            <h3>Question 2</h3>
+            <p>Which of the following are HTML elements? (Select all that apply)</p>
+            <Question>
+                <option1>
+                    <input type="checkbox" id="q2a" name="q2" value="<div>">
+                    <label for="q2a">&lt;div&gt;</label><br>
+                </option1>
+                <option2>
+                    <input type="checkbox" id="q2b" name="q2" value="<span>">
+                    <label for="q2b">&lt;span&gt;</label><br>
+                </option2>
+            </Question>
+            <button>Submit Answer</button>
+        
+            <form id = "finish-quiz">
+                <button type="submit" formaction="leaderboard.html">Finish</button>
+                <br><br>
+            </form>
+        </Quiz>
+    </main>
+    <footer>
+        <p>&copy; 2025 LMS. All rights reserved.</p>
+    </footer>
+</body>
+</html>

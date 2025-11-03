@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course View - LMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
+        <h1>LMS - Learning Management System</h1>
+    </header>
+    <div>
+        <nav>
+            <a href="index.html">Homepage</a>
+        </nav>
+    </div>
+    <main id="courseviewmain">
+        <termselect>
+            <label for="term">Select Term:</label>
+            <select id="term" name="term">
+                <option value="Winter 2025">Winter 2025</option>
+                <option value="Winter 2024">Winter 2024</option>
+                <option value="Fall 2025">Fall 2025</option>
+                <option value="Fall 2024">Fall 2024</option>
+            </select>
+        </termselect>
+        
+        <section class="Enrolled">
+			<!-- Courses in which the student is enrolled -->
+            <!-- Display Course 1, 2, and 3 in the same line -->
+            <h2>Enrolled Courses</h2>
+            <hr>
+            <table>
+				<tr>
+					<td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: Web Development</p>
+                            <p>Course Code: WD381</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+					<td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: Data Structures</p>
+                            <p>Course Code: DS371</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+                    <td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: DBMS</p>
+                            <p>Course Code: DB346</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+				</tr>
+				<!-- Display Course 4 and 5 in the same line -->
+				<tr>
+					<td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: Software Testing</p>
+                            <p>Course Code: ST484</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+					<td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: Software Architectures</p>
+                            <p>Course Code: SA396</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+				</tr>
+            </table> 
+        </section>
+        
+        <div>
+        </div>
+        <br>
+        <br>
+        <section class="Pending">
+			<!-- Courses in which the student is enrolled -->
+            <!-- Display Course 1, 2, and 3 in the same line -->
+            <h2>Pending Invitations</h2>
+            <hr>
+            <table>
+				<tr>
+					<td>
+                        <div>
+                            <img src="course2.jpg" alt="Course 2" width="250">
+                            <p>Course Name: Data Science</p>
+                            <p>Course Code: DS102</p>
+                            <buttoninput>
+                                <button id = "Accept">Accept</button>
+                                <button id = "Decline">Decline</button>
+                            </buttoninput>
+                        </div>
+                    </td> 
+                    <td>
+                        <div>
+                            <img src="course2.jpg" alt="Course 2" width="250">
+                            <p>Course Name: Machine Learning</p>
+                            <p>Course Code: ML105</p>
+                            <buttoninput>
+                                <button id = "Accept">Accept</button>
+                                <button id = "Decline">Decline</button>
+                            </buttoninput>
+                        </div>
+                    </td> 
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 LMS. All rights reserved.</p>
+    </footer>
+</body>
+</html>
