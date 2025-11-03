@@ -1,0 +1,3 @@
+In Exercise 1, we created a simple personal webpage using HTML. The purpose of this exercise was to become familiar with basic HTML elements, including headings, lists, links, images, and forms. All the required images and text were provided in the supplementary folder.
+
+In Exercise 2, we learned how to create a structured HTML page using a combination of text, images, and hyperlinks. In this exercise, we built a page similar to the University of Calgary’s History page (https://ucalgary.ca/about/our-history). We explored how to use tables for layout, define sections with headings and paragraphs, and embed images and links.
