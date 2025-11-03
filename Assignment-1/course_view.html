@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LMS | Course View</title>
+    </head>
+        <body>
+            <header style = "padding-left: 40px;">
+                <img src = "logo.jpg" 
+                alt = "LMS Logo" width = "120px" height = "120px">
+                <p><h1 style = "font-size: 40px;">LMS - Learning Management System</h1></p>
+                <p><h1 style = "font-size: 30px;">LMS - Course View</h1></p>
+            </header>
+            <div style = "padding-left: 40px; font-size: 20px;">
+                <a href="index.html" style="color: blue;">Homepage</a>
+            </div>
+            <br>
+            <main style = "padding-left: 40px; font-size: 20px;">
+                <label for="term">Select Term:</label>
+                <select id="term" name="selectterm">
+                    <option value="winter2025" selected>Winter 2025</option>
+                    <option value="fall2024">Fall 2024</option>
+                    <option value="summer2024">Summer 2024</option>
+                    <option value="spring2024">Spring 2024</option>
+                    <option value="winter2024">Winter 2024</option>
+                </select>
+
+                <table style="width:95%; border:1px;">
+                    <tr>
+                        <td colspan="3">
+                            <h2>Enrolled Courses</h2>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="course1.jpg" alt="Course1" width="100%" height="100%">
+                            <br>
+                            <br>
+                            Course Name: Web Development
+                            <br>
+                            <br>
+                            Course Code: WD381
+                            <br>
+                            <br>
+                            <a href="attempt_quiz.html" style="color: blue;">Attempt Quiz</a>
+                        </td>
+
+                        <td>
+                            <img src="course1.jpg" alt="Course2" width="100%" height="100%">
+                            <br>
+                            <br>
+                            Course Name: Data Structures
+                            <br>
+                            <br>
+                            Course Code: DS371
+                            <br>
+                            <br>
+                            <a href="attempt_quiz.html" style="color: blue;">Attempt Quiz</a>
+                        </td>
+
+                        <td>
+                            <img src="course1.jpg" alt="Course3" width="107%" height="107%">
+                            <br>
+                            <br>
+                            Course Name: DBMS
+                            <br>
+                            <br>
+                            Course Code: DB346
+                            <br>
+                            <br>
+                            <a href="attempt_quiz.html" style="color: blue;">Attempt Quiz</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="course1.jpg" alt="Course1" width="100%" height="100%">
+                            <br>
+                            <br>
+                            Course Name: Software Testing
+                            <br>
+                            <br>
+                            Course Code: ST484
+                            <br>
+                            <br>
+                            <a href="attempt_quiz.html" style="color: blue;">Attempt Quiz</a>
+                        </td>
+
+                        <td>
+                            <img src="course1.jpg" alt="Course1" width="100%" height="100%">
+                            <br>
+                            <br>
+                            Course Name: Software Architectures
+                            <br>
+                            <br>
+                            Course Code: SA396
+                            <br>
+                            <br>
+                            <a href="attempt_quiz.html" style="color: blue;">Attempt Quiz</a>
+                        </td>
+                    </tr>
+                </table>
+
+                <br>
+                
+                <!-- Hi. So we tried eveyrthing possible with this table to make it come out like the 
+                 output, but nothin was working, especially when we weren't allowed to use CSS. We hope
+                 this is still satisfactory -->
+
+                <table style="width:95%; border:1px;">
+                    <tr>
+                        <td colspan="3">
+                            <h2> Pending Invitations </h2>
+                            <hr>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 0; border-spacing: 0;">
+                            <img src="course2.jpg" alt="Course1" width="75%" height="75%">
+                            <br>
+                            <br>
+                            Course Name: Web Development
+                            <br>
+                            <br>
+                            Course Code: WD381
+                            <br>
+                            <br>
+                            <form>
+                                <input style = "background-color: #a4f4a1; color: black;
+                                font-size: 15px; order: 1px solid black; cursor: pointer;"
+                                type="button" value="Accept">
+                                <input style = "background-color: #f4a1a1; color: black;
+                                font-size: 15px; order: 1px solid black; cursor: pointer;" 
+                                type="button" value="Decline">
+                            </form>
+                        </td>
+
+                        <td style="padding: 0; border-spacing: 0;">
+                            <img src="course2.jpg" alt="Course2" width="75%" height="75%">
+                            <br>
+                            <br>
+                            Course Name: Data Structures
+                            <br>
+                            <br>
+                            Course Code: DS371
+                            <br>
+                            <br>
+                            <form>
+                                <input style = "background-color: #a4f4a1; color: black;
+                                font-size: 15px; order: 1px solid black; cursor: pointer;"
+                                type="button" value="Accept">
+                                <input style = "background-color: #f4a1a1; color: black;
+                                font-size: 15px; order: 1px solid black; cursor: pointer;" 
+                                type="button" value="Decline">
+                            </form>
+                        </td>
+                    </tr>
+                </table>
+            </main>
+            <footer style = "padding-left: 40px;">
+                <p style = "font-size: 20px;">© 2025 LMS. All rights reserved.</p>
+            </footer>
+        </body>
+</html>
