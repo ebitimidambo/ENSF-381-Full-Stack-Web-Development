@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .container {
+            display: flex;
+            border: 2px solid black;
+            padding: 10px;
+            
+            }
+            .item{
+            flex: 1;
+            padding: 20px;
+            margin: 5px;
+            background-color: lightblue;
+            border: 1px solid darkblue;
+            text-align: center;
+            }
+            .item img {
+            width: 100px;
+            height: 100px;
+            display: block;
+            margin: 0 auto 10px;
+            }
+
+            .item:nth-child(1) {
+            order: 3;
+            }   
+            .item:nth-child(2) {
+            order: 1;
+            }
+            .item:nth-child(3) {
+            order: 2;
+            }
+
+        </style>
+
+        <title> Exercise 2 Lab 3</title>
+    </head>
+        <body>
+            <div class="container">
+
+                <div class="item">
+                        <img src="schulich.png" class="image">
+                        <span> <b> SCHULICH School of Engineering</b></span>
+                        <br>
+                        <p> <span> UCalgary's hub for innovative engineering education. </span> </p>
+                </div>
+
+                <div class="item">
+                    <img src="EE_eng.png" class="image">
+                    <span> <b> Electrical Engineering Department</b></span>
+                        <br>
+                        <p> <span> Powering innovation in electronics and systems. </span> </p>
+                </div>
+
+                <div class="item">
+                    <img src="chemical_eng.jpg" class="image">
+                    <span> <b> Chemical Engineering Department</b></span>
+                        <br>
+                        <p> <span> Advancing processes for a sustainable future.  </span> </p>
+                </div>
+
+                <div class="item">
+                    <img src="biomedical.png" class="image">
+                    <span> <b> Biomedical Engineering Department</b></span>
+                        <br>
+                        <p> <span> Engineering solutions for health and medicine. </span> </p>
+                </div>
+
+                <div class="item">
+                    <img src="geomatics_eng.jpeg" class="image">
+                    <span> <b> Department of Geomatics Engineering</b></span>
+                        <br>
+                        <p> <span> Mapping and analyzing the world around us. </span> </p>
+                </div>
+
+
+
+            </div>
+        </body>
+
+
+
+</html>
