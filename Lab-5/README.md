@@ -8,7 +8,7 @@ When a user typed text in the textbox and pressed the Enter key, the input text 
 Exercise 2 – Creating a Mock API Using MockAPI.io
 
 In Exercise 2, we learned to create and configure a mock RESTful API using MockAPI.io
-. The objective was to understand how to simulate backend functionality and generate realistic test data for frontend development.
+The objective was to understand how to simulate backend functionality and generate realistic test data for frontend development.
 
 We created a new project called “FullStackLab” and added a resource named users_api. Two key fields were defined — first_name (using Faker.js to generate random names) and user_group (a numeric field representing user categories). We configured the API to return 30 users per request, providing consistent, realistic data for later use in Exercise 3. This step introduced the concept of backend simulation, preparing us for API integration and asynchronous data retrieval in web applications.
 
