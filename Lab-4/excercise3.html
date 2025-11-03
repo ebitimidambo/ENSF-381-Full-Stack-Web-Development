@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 4 - Exercise 3</title>
+    </head>
+    
+    <body>
+        <h1>JavaScript Lab</h1>
+        <script>
+            // Arrays and Basic Methods
+            let classRoster = ["Alice", "Tom", "Charlie", "Diana", "Evan"];
+
+            console.log("ToString() Method: " + classRoster.toString());
+            console.log("Original: " + classRoster);
+            classRoster.push("Fiona");
+            classRoster.push("Nancy");
+            classRoster.shift();
+            console.log("Changes: " + classRoster);
+            console.log("Total No. Of Students: " + classRoster.length);
+
+            // Objects with Nested Structures
+            let classInfo = {
+                className: "ENSF381: Full-Stack Web Development",
+                instructor: "Dr. Smith",
+                students: ["Alice", "Tom", "Charlie", "Diana", "Evan"],
+                details: {
+                    semester: "Winter",
+                    year: 2025,
+                },
+                schedule: ["Monday", "Wednesday", "Friday"],
+            }
+
+            classInfo.instructor = "Dr. Deb";
+            console.log("Class Name: " + classInfo.className);
+            console.log("Instructor: " + classInfo.instructor);
+            console.log("Students: " + classInfo.students.toString());
+            console.log("Semester: " + classInfo.details.semester);
+            console.log(classInfo);
+
+            let {className: Course, students:Class_List} = classInfo;
+
+            console.log("Course: " + Course);
+            console.log("Class List: " + Class_List);
+
+            let {semester:Semester, year: Year} = classInfo.details;
+            console.log("Semester: " + Semester);
+            console.log("Year: " + Year);
+
+            let[student1, student2, ...remainingStudents] = classInfo.students;
+            console.log("First Student: " + student1);
+            console.log("Second Student: " + student2);
+            console.log("Remaining Students: " + remainingStudents);
+        </script>
+    </body>
+</html>

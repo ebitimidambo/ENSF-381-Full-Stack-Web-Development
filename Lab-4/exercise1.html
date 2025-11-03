@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 4 - Exercise 1</title>
+    </head>
+    
+    <body>
+        <h1>JavaScript Lab</h1>
+        <script>
+
+            // Variable Declaration
+            let x = 1, y = 2, z = 3;
+            const a = 4, b = 8, c = 12;
+
+            //console.log("Before:" + x);
+            x = 4;
+            //console.log("After: " + x);
+
+            //const c = 13;  //Uncaught SyntaxError: Identifier 'c' has already been declared
+
+            //String Operations
+            let string1 = "Hello, World!";
+            let string2 = "JavaScript is fun!";
+
+            console.log("String 1 Length: " + string1.length);
+            console.log("String 2 Length: " + string2.length);
+            console.log("Concatenated String: " + string1.concat(string2));
+            console.log(string2.replace("fun", "awesome"));
+
+            // String Templates
+            let name = "Alice";
+            let age = 25;
+
+            let introduction = `My name is ${name} and I am ${age} years old`;
+            console.log(introduction);
+
+            // Working with Dates
+            let todays_date = new Date();
+            console.log(todays_date);
+            console.log("The year is: " + todays_date.getFullYear());
+            console.log("The month number is: " + todays_date.getMonth());
+            console.log("The day number is: " + todays_date.getDay());
+            let Days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            console.log("The actual day is: " + Days[todays_date.getDay()]);
+        </script>
+    </body>
+</html>

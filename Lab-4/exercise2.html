@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab4 - Exercise 2</title>
+    </head>
+
+    <body>
+        <h1>JavaScript Lab</h1>
+        <script>
+            /* Exercise 2 - Question 1 
+            function add(x, y) {
+                return x + y;
+            };
+
+            function subtract(x, y) {
+                return x - y;
+            };
+    
+            console.log(add(3,5));
+            console.log(subtract(9,6));
+            */
+
+
+            /* Exercise 2 - Question 2 
+            function add(x, y=2) {
+                return x + y;
+            };
+
+            function subtract(x, y=2) {
+                return x - y;
+            };
+
+            console.log(add(3,5));
+            console.log(subtract(9,6));
+
+            console.log(add(3));
+            console.log(subtract(9));
+            */
+
+
+            // Exercise 2 - Question 3
+            let add = (x, y) => x + y;
+            let subtract = (x, y) => x - y;
+            let multiply = (x, y) => x * y;
+            let divide = (x, y) => {
+                if (y != 0) {
+                    return x / y;
+                }
+                else {
+                    let messsage = "Division by zero is prevented.";
+                    return messsage;
+                }
+            };
+        
+            /*
+            console.log(add(3,5));
+            console.log(subtract(9,6));
+            console.log(multiply(2,6));
+            console.log(divide(6,3));
+            console.log(divide(3,0));
+            */
+
+            // Exercise 2 - Question 4
+            function calculator(x, y, operation) {
+                return operation(x, y);
+            }
+
+            console.log(calculator(3, 5, add));       
+            console.log(calculator(6, 2, multiply));
+        </script>
+    </body>
+</html>
