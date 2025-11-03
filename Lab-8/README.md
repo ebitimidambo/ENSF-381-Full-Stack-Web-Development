@@ -8,7 +8,7 @@ We installed and configured the BeautifulSoup and Requests libraries, then used 
 
 Exercise 2 – Content Analysis
 
-Using the BeautifulSoup API, we wrote Python scripts to count the number of <h>, <a>, and <p> tags. We also implemented keyword and word frequency analysis by converting the HTML text into plain text and applying string and list operations to identify the most frequently occurring words.
+Using the BeautifulSoup API, we wrote Python scripts to count the number of h, a, and p tags. We also implemented keyword and word frequency analysis by converting the HTML text into plain text and applying string and list operations to identify the most frequently occurring words.
 
 Exercise 3 – Visualization
 
