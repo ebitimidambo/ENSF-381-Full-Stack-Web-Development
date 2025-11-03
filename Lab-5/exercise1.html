@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab5 - Exercise 1</title>
+    </head>
+    <body>
+        <input type="text" id="textInput" placeholder="Type something
+        here..."/>
+        <label id="textLabel"></label>
+        <button id="redButton">Red</button>
+        <button id="blueButton">Blue</button>
+        <button id="greenButton">Green</button>
+        <button id="orangeButton">Orange</button>
+        <button id="purpleButton">Purple</button>
+    </body>
+    <script type="text/javascript">
+        var input = document.getElementById("textInput");
+        var Button1 = document.getElementById("redButton");
+        var Button2 = document.getElementById("blueButton");
+        var Button3 = document.getElementById("greenButton");
+        var Button4 = document.getElementById("orangeButton");
+        var Button5 = document.getElementById("purpleButton");
+
+        input.addEventListener("keypress", (event)=>{
+            if (event.key == "Enter"){
+                myfunction();
+            }
+        });
+
+        function myfunction(){
+            var mylabels = document.getElementById("textLabel");
+            var input_box = document.getElementById("textInput");
+            mylabels.textContent = input_box.value;
+        };
+
+        Button1.addEventListener("click", () =>{
+            changeColor("red");
+        });
+
+        Button2.addEventListener("click", () =>{
+            changeColor("blue");
+        });
+
+        Button3.addEventListener("click", () =>{
+            changeColor("green");
+        });
+
+        Button4.addEventListener("click", () =>{
+            changeColor("orange");
+        });
+
+        Button5.addEventListener("click", () =>{
+            changeColor("purple");
+        });
+
+        function changeColor(color_code){
+            let mylabel = document.getElementById("textLabel");
+            if (color_code == "red"){
+                mylabel.style.color = "#ff0000";
+            } else if (color_code == "blue"){
+                mylabel.style.color = "#0000ff";
+            } else if (color_code == "green"){
+                mylabel.style.color = "#008000";
+            } else if (color_code == "orange"){
+                mylabel.style.color = "#ffa500";
+            } else if (color_code == "purple"){
+                mylabel.style.color = "#800080";
+            }
+        }
+    </script>
+</html>
