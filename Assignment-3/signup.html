@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Signup - LMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
+        <h1>LMS - Learning Management System</h1>
+    </header>
+    <div>
+        <nav>
+            <a href="index.html">Homepage</a>
+        </nav>
+    </div>
+    <main id="signupmain">
+        <h2>LMS Signup</h2>
+
+        <div id="signup-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+
+            <signup id = "signup">
+                <button type="submit" id="signupbutton">Sign Up</button>
+            </signup>
+        </div>
+        <message id = "messagestate">
+        </message>
+        <br>
+        <links>
+            <a href="login.html">Already have an account? Log in</a>
+        </links>
+    </main>
+    <footer>
+        <p>&copy; 2025 LMS. All rights reserved.</p>
+    </footer>
+    <script>
+        const container = document.getElementById("messagestate");
+        const messageBox = document.createElement("div");
+        container.appendChild(messageBox);
+        const signup_button = document.getElementById("signupbutton");
+        signup_button.addEventListener("click", () => {validateSignup()});
+
+        function validateSignup() {
+            messageBox.id = "messagebox";
+            console.log("Fired!");
+            const username = document.getElementById("username");
+            const email = document.getElementById("email");
+            const password = document.getElementById("password");
+            const confirmPassword = document.getElementById("confirm-password");
+            const username_pattern = /^[A-Za-z][A-Za-z0-9-_]{2,19}$/;
+            const password_pattern = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()\-_=\+\[\]{}\\|;:'",.<>\/?`~])[A-Za-z0-9!@#$%^&*()\-_=\+\[\]{}\\|;:'",.<>\/?`~]{8,}$/;
+            const email_pattern = /^[A-Za-z0-9._]+@[A-Za-z0-9.-]+\.[a-z]{2,}$/;
+            var met_requirements = true;
+
+            if (!username_pattern.test(username.value)) {
+                const message = document.createElement("p");
+                message.textContent = "Invalid username (Must have 3-20 chars, start with letter, use only letters, numbers, hyphens, or underscores.)";
+                messageBox.appendChild(message);
+                met_requirements = false;
+            }
+
+            if (!email_pattern.test(email.value)) {
+                const message = document.createElement("p");
+                message.textContent = "Invalid email (Must be valid format, contain no spaces, contain an '@' follwed by domain (.com, .io))";
+                messageBox.appendChild(message);
+                met_requirements = false;
+            }
+
+            if (!password_pattern.test(password.value)) {
+                const message = document.createElement("p");
+                message.textContent = "Invalid Password (Must be at least 8 characters, contain one uppercase, one lowercase, one number, and one special character)";
+                messageBox.appendChild(message);
+                met_requirements = false;
+            }
+
+            if (password.value !== confirmPassword.value) {
+                const message = document.createElement("p");
+                message.textContent = "Passwords do not match.";
+                messageBox.appendChild(message);
+                met_requirements = false;
+            }
+
+            if (met_requirements == true){
+                const message = document.createElement("p");
+                message.textContent = "Signup successful! Redirecting to login page...";
+                messageBox.appendChild(message);
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 2000);
+            } else {
+                return;
+            }
+            // Hi. So we didn't know if we were to delete each error message after a set period of time to improve
+            // user experience, so we just left them there for easier evaluation and to show our code works.
+        }
+    </script>
+</body>
+</html>

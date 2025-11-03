@@ -1,0 +1,467 @@
+/*
+    Group Number: 4
+    Member: Ebitimi Dambo (30207054)
+    Member: Erin Kim (30211474)
+
+    We have included comments highlighting each requirement to make assessing the 
+    style sheet easier. Thank you.
+*/
+
+header{
+    background-color: #004080; /* Set background color to #004080 (deep blue). */
+    padding: 20px; /* Apply padding of 20px */
+    margin: 0px; /* Apply margin of 0 */
+    display: flex; /* Use Flexbox */
+    flex-direction: row;
+    justify-content: space-between; /* Align the LMS logo on the left and the LMS name on the right. */
+    h1{ /* Optional Formatting */
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 22px;
+        padding-top: 15px;
+    }
+}
+
+nav{
+    display: flex; /* Display navigation as a flex container. */
+    flex-direction: row;
+    justify-content: space-evenly; /* Make even spacing of navigation links to other pages. */
+    background-color: #003366; /* Set background color to #003366 */
+    padding: 10px; /* Apply padding of 10px for better spacing. */
+    a {
+        color: white; /* white text */
+        text-decoration: none;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 15px;
+    }
+    a:hover{ /* Underline the navigation links when hovering the mouse on them */
+        text-decoration: underline;
+    }
+}
+
+#indexmain{ /* Code Start for index */
+    #about{
+        text-align: center; /* Center-align the text. */
+        padding: 20px; /* Apply padding of 20px */
+        margin: 20px; /* Margin adds whitespace. Asked professor about it and said it was fine*/
+        background-color: #d4d4d4; /* Set background color to #d4d4d4 (light gray). */
+    }
+
+    h2{
+        text-align: center;
+        color: #004080;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        padding-top: 30px;
+    }
+
+    ul{
+        display: inline-block;
+        list-style-type: "-";
+    }
+}
+
+#login-form{ /* Handles input section of login page */
+    display: flex; /* Using flexbox. */
+    flex-direction: column; 
+    align-items: center; /* Center-align the login form  */
+    background-color: #d4d4d4; /* Set background color to #d4d4d4  */
+    padding: 30px; /* Add padding: 30px */
+    margin-left: 150px; /*left margin: 150px */
+    margin-right: 150px; /* right margin: 150px */
+    border-radius: 30px; /* border-radius: 30px */
+    box-shadow: 10px 12px 5px #f2f2f2; /* Add shadow effects for better visual appeal */
+
+    input{
+        background-color: lightyellow; /* Background color: light yellow. */
+        padding: 10px; /* Padding: 10px. */
+        border-radius: 5px; /* Rounded corners (border-radius: 5px) */
+        border: 3px darkgrey; /* Border: dark grey and 3px wide */
+        width: 240px; /* Avoid spanning whole flexbox */
+    }
+
+    label{
+        padding-bottom: 8px;
+    }
+}
+
+#loginmain{ /* Code Start for login */
+    h2{
+        text-align: center;
+        color: #004080;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        padding-top: 30px;
+    }
+
+    login{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        button{
+            color: white; /*white text.*/
+            background-color: green; /* Use #008000 (green) */
+            border-radius: 5px;
+            padding: 8px;
+            border: 0px;
+            text-decoration: none;
+        }
+
+        button:hover{ /* Add hover effect: darker green (#006600) when hovered */
+            background-color: #006600;
+        }
+
+        a{
+            color: #004080; /* Color: #004080 (deep blue) */
+            text-decoration: none;
+            text-align: center;
+        }
+        a:hover{ /* underlined on hover */
+            text-decoration: underline;
+        }
+    }
+    #messagebox {
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        justify-content: center;
+        align-items: center;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 20px;
+    }
+}
+
+#courseviewmain{
+    termselect{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-top: 20px;
+        #term{
+            background-color: lightyellow; /* Background color: light yellow. */
+            border-radius: 5px; /* Border radius: 5px. */
+            padding: 5px; /* Padding: 5px. */
+        }
+        label{
+            padding-right: 2px;
+        }
+    }
+
+    tr{
+        td{
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 20px; /* Apply padding: 20px */
+                margin: 15px; /* Margin adds whitespace. Asked professor about it and said it was fine*/
+                border-radius: 10px; /* Apply border-radius: 10px. */
+                background-color: #e6f2ff; /* Have a background color of #e6f2ff */
+                box-shadow: 10px 12px 5px #f2f2f2; /* Use a box-shadow effect */
+                img{
+                    width: 100%;
+                }
+            }
+            div:hover{
+                background-color: #ffffff;
+            }
+        }
+    }
+
+    #AcceptOne{
+        color: white; /* White text */
+        border: 0px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #4CAF50; /* Green background (#4CAF50) */
+    }
+
+    #AcceptTwo{
+        color: white; /* White text */
+        border: 0px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #4CAF50; /* Green background (#4CAF50) */
+    }
+
+    #AcceptOne:hover{ /* Dark green (#265e28) on hover */
+        background-color: #265e28;
+    }
+
+    #AcceptTwo:hover{ /* Dark green (#265e28) on hover */
+        background-color: #265e28;
+    }
+
+    #DeclineOne{
+        color: white; /* white text */
+        border: 0px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #D32F2F; /* Red background (#D32F2F) */
+    }
+
+    #DeclineOne:hover{ /* Dark red (#821b1b) on hover */
+        background-color: #821b1b;
+    }
+
+    #DeclineTwo{
+        color: white; /* white text */
+        border: 0px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: #D32F2F; /* Red background (#D32F2F) */
+    }
+
+    #DeclineTwo:hover{ /* Dark red (#821b1b) on hover */
+        background-color: #821b1b;
+    }
+
+    h2{ /* Optional Formatting */
+        text-align: center;
+        color: #004080;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        padding-top: 15px;
+    }
+}
+
+#attemptquizmain{ /* Code Start for attempt_quiz */
+    img{
+        width: 100%; /* Set banner width to 100% */
+        height: 150px; /* Height to 150px */
+        border-radius: 10px; /* The banner should have rounded corners */
+        margin-top: 30px;
+    }
+
+    h2{
+        text-align: center;
+        color: #004080;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        padding-top: 30px;
+    }
+
+    CourseDetails{ /* Display course code and quiz topic in large bold text and centered. */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: lightblue; /* Style details with light blue background */
+        padding: 20px; /* Padding of 20px */
+        margin-left: 250px; /* Have left margins of 250px */
+        margin-right: 250px; /* Have right margins of 250px */
+    }
+
+    Question{ /* Be styled with proper spacing. */
+        width: 290px;
+        background-color: #cacaca; /* Use background color of #cacaca (light gray) */
+        option1{
+            display: flex;
+            flex-direction: row;
+            padding-left: 10px;
+            padding-top: 20px;
+            justify-content: left; /* Left aligned manner */
+        }
+
+        option2{
+            display: flex;
+            flex-direction: row;
+            padding-left: 10px;
+            padding-bottom: 20px;
+            justify-content: left;
+        }
+    }
+
+    Quiz{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        button{
+            margin-top: 15px;
+            background-color: lightblue; /* Light blue background */
+            padding: 8px 15px;
+            color: black; /* Black Text */
+            border: 0px;
+            border-radius: 5px;
+        }
+
+        button:hover{ /*On hover, dark blue background */
+            background-color: darkblue;
+            color: white;
+        }
+    }
+
+    #finish-quiz{
+        button{ 
+            border: 0px;
+            background-color: #D32F2F; /* Light red background (#D32F2F */
+            color: white; /* White Text */
+            padding: 8px 20px;
+            border-radius: 5px;
+        }
+
+        button:hover{ /*  On hover, dark red background (#821b1b). */
+            background-color: #821b1b;
+        }
+    }
+}
+
+#leaderboardmain{
+    #TableTitle{
+        background-color: #4CAF50; /* Green background (#4CAF50) with white text. */
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    /*
+    o Gold (#FFD700) for 1st place.
+    o Silver (#C0C0C0) for 2nd place (merged cells if tied).
+    o Bronze (#CD7F32) for 3rd place.
+    o use alternating row colors (#f9f9f9 and # e4e2e2) for better readability.
+    */
+    
+    #Gold{
+        background-color: #FFD700;  
+     }
+     
+    #Silver{
+        background-color: #C0C0C0;
+    }
+     
+    #Bronze{
+        background-color: #CD7F32;
+    }
+
+    #Untiered1{
+        background-color: #f9f9f9;
+    }
+
+    #Untiered2{
+        background-color: #e4e2e2;
+    }
+
+    img{
+        border-radius: 50%; /* Profile pictures should be circular */
+        border: 1px solid #000000;
+    }
+
+    /* Code below is just for optional formatting */
+
+    td{
+        border: 2px solid white;
+        border-collapse: collapse;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;    
+    }
+
+    th{
+        border: 2px solid white;
+        border-collapse: collapse;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;    
+    }
+
+    margin-bottom: 25px;
+}
+
+footer{
+    background-color: #004080; /* Set background color to #004080 (deep blue) */
+    color: white; /* white text. */
+    padding: 10px; /* Apply padding of 10px */
+    text-align: center;
+}
+
+#signup-form{ /* Handles input section of login page */
+    display: flex; /* Using flexbox. */
+    flex-direction: column; 
+    align-items: center; /* Center-align the login form  */
+    background-color: #d4d4d4; /* Set background color to #d4d4d4  */
+    padding: 30px; /* Add padding: 30px */
+    margin-left: 150px; /*left margin: 150px */
+    margin-right: 150px; /* right margin: 150px */
+    border-radius: 30px; /* border-radius: 30px */
+    box-shadow: 10px 12px 5px #f2f2f2; /* Add shadow effects for better visual appeal */
+    margin-bottom: 30px;
+
+    input{
+        background-color: lightyellow; /* Background color: light yellow. */
+        padding: 10px; /* Padding: 10px. */
+        border-radius: 5px; /* Rounded corners (border-radius: 5px) */
+        border: 3px darkgrey; /* Border: dark grey and 3px wide */
+        width: 240px; /* Avoid spanning whole flexbox */
+    }
+
+    label{
+        padding-bottom: 8px;
+    }
+}
+
+#signupmain{ /* Code Start for login */
+    h2{
+        text-align: center;
+        color: #004080;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        padding-top: 30px;
+    }
+
+    links{
+        display: flex;
+        justify-content: center;
+        a{
+            color: #004080; /* Color: #004080 (deep blue) */
+            text-decoration: none;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+        a:hover{ /* underlined on hover */
+            text-decoration: underline;
+        }
+    }
+
+    signup{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+
+        button{
+            color: white; /*white text.*/
+            background-color: #4CAF50 ; /* Use #008000 (green) */
+            border-radius: 5px;
+            padding: 10px;
+            border: 0px;
+            margin: 10px;
+            opacity: 0.5;
+            text-decoration: none;
+        }
+
+        button:hover{ /* Add hover effect: darker green (#006600) when hovered */
+            background-color: #45A049;
+            opacity: 1.0;
+        }
+
+        a{
+            color: #004080; /* Color: #004080 (deep blue) */
+            text-decoration: none;
+            text-align: center;
+        }
+        a:hover{ /* underlined on hover */
+            text-decoration: underline;
+        }
+    }
+    #messagebox {
+        display: flex;
+        flex-direction: column;
+        border-style: solid;
+        justify-content: center;
+        align-items: center;
+        margin-left: 60px;
+        margin-right: 60px;
+        margin-bottom: 20px;
+    }
+}

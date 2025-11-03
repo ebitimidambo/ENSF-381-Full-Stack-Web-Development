@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leaderboard - LMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
+        <h1>LMS - Learning Management System</h1>        
+    </header>
+
+    <div>
+        <nav>
+            <a href="index.html">Homepage</a> | 
+            <a href="course_view.html">Courses</a> 
+        </nav>
+    </div>
+
+    <main id="leaderboardmain">
+        <br>
+        <br>
+        <table border="1" style="border-collapse: collapse; width: 100%; text-align: center;font-size: 20px;" id = "StudentTable">
+            <tr style="background-color: #4CAF50; color: white;font-size: 36px;" id = "TableTitle">
+                <th colspan="5">Leaderboard</th>
+            </tr>
+            <tr>
+                <th>Rank</th>
+                <th>Profile Picture</th>
+                <th>Name</th>
+                <th>Total Score</th>
+                <th>Course</th>
+            </tr>
+            <tr style="background-color: #FFD700;" id="Gold">
+                <td>1</td>
+                <td><img src="student.png" alt="Profile Picture" style="width: 50px; height: 50px;"></td>
+                <td>John Doe</td>
+                <td>95</td>
+                <td>Web Development</td>
+            </tr>
+            <tr style="background-color: #C0C0C0;" id="Silver">
+                <td rowspan="2">2</td>
+                <td><img src="student.png" alt="Profile Picture" style="width: 50px; height: 50px;"></td>
+                <td>Jane Smith</td>
+                <td>90</td>
+                <td>Data Structures</td>
+            </tr>
+            <tr style="background-color: #C0C0C0;" id="Silver">
+                <td><img src="student.png" alt="Profile Picture" style="width: 50px; height: 50px;"></td>
+                <td>Emily White</td>
+                <td>90</td>
+                <td>Algorithms</td>
+            </tr>
+            <tr style="background-color: #CD7F32;" id="Bronze">
+                <td>3</td>
+                <td><img src="student.png" alt="Profile Picture" style="width: 50px; height: 50px;"></td>
+                <td>Michael Brown</td>
+                <td>85</td>
+                <td>Machine Learning</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;" id="Untiered1">
+                <td>4</td>
+                <td><img src="student.png" alt="Profile Picture" style="width: 50px; height: 50px;"></td>
+                <td>Sarah Johnson</td>
+                <td>80</td>
+                <td>Networking</td>
+            </tr>
+            <tr style="background-color: #e4e2e2;" id="Untiered2">
+                <td>4</td>
+                <td><img src="student.png" alt="Profile Picture" style="width: 50px; height: 50px;"></td>
+                <td>Rob Miller</td>
+                <td>75</td>
+                <td>Networking</td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 LMS. All rights reserved.</p>
+    </footer>
+</body>
+</html>

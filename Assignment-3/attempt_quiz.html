@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Attempt Quiz - LMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
+        <h1>LMS - Learning Management System</h1>
+    </header>
+    <div>
+        <nav>
+            <a href="index.html">Homepage</a> | 
+            <a href="course_view.html">Courses</a> 
+        </nav>
+    </div>
+    <main id = "attemptquizmain">
+        <img src="banner.jpg" alt="Quiz Banner" style="width: 100%;">
+        <CourseDetails id = "CourseDetails">
+            <h2>Course: Web Development</h2>
+            <p>Topic: HTML Basics</p>
+            <p>Last Date: February 10, 2025</p>
+            <p>Attempts Allowed: 1</p>
+        </CourseDetails>
+        
+        <Quiz>
+            <h3>Question 1</h3>
+            <p>What does HTML stand for?</p>
+            <Question id="Question1">
+                <option1>
+                    <input type="radio" id="q1a" name="q1" value="Hyper Text Markup Language">
+                    <label for="q1">Hyper Text Markup Language</label><br>
+                </option1>
+                <option2>
+                    <input type="radio" id="q1b" name="q1" value="Home Tool Markup Language">
+                    <label for="q1b">Home Tool Markup Language</label><br>
+                </option2>
+            </Question>
+            <button id = "Submit1">Submit Answer</button>
+
+        
+            <h3>Question 2</h3>
+            <p>Which of the following are HTML elements? (Select all that apply)</p>
+            <Question id="Question2">
+                <option1>
+                    <input type="checkbox" id="q2a" name="q2" value="<div>">
+                    <label for="q2">&lt;div&gt;</label><br>
+                </option1>
+                <option2>
+                    <input type="checkbox" id="q2b" name="q2" value="<span>">
+                    <label for="q2">&lt;span&gt;</label><br>
+                </option2>
+            </Question>
+            <button id = "Submit2">Submit Answer</button>
+        
+            <div id = "finish-quiz">
+                <button id ="submitbutton">Finish</button>
+                <br><br>
+            </div>
+            <result id = "QuizResult">
+
+            </result>
+        </Quiz>
+    </main>
+    <footer>
+        <p>&copy; 2025 LMS. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    var timer_container = document.getElementById("CourseDetails");
+    var timer_gui = document.createElement("h2");
+    timer_container.appendChild(timer_gui);
+    const myTimer = setInterval(() => timer(), 1000);
+    var minute = 10;
+    var second = 0;
+    var score = 0;
+    var time = 5;
+    var q1_locked_in = false;
+    var q2_locked_in = false;
+
+    function timer(){
+        if (second == 0){
+            if (minute == 0){
+                timer_gui.style = "color: red";
+                window.location.href = "leaderboard.html";
+                return;
+            }
+
+            minute = minute - 1;
+            second = 59;
+
+            var time_display = (minute < 10 ? "0" + minute : minute) + " : " + 
+            (second < 10 ? "0" + second : second);
+
+            timer_gui.textContent = time_display;
+        }else {
+            
+            second = second - 1
+
+            var time_display = (minute < 10 ? "0" + minute : minute) + " : " + 
+            (second < 10 ? "0" + second : second);
+
+            timer_gui.textContent = time_display;
+        }
+    }
+
+    var q1 = document.getElementById("Submit1");
+    var q2 = document.getElementById("Submit2");
+
+    q1.addEventListener("click", ()=> {validateanswer(document.getElementById("Question1"), "q1")});
+    q2.addEventListener("click", ()=> {validateanswer(document.getElementById("Question2"), "q2")});
+
+    function validateanswer(question_container, question){
+        if (question == "q1"){
+            var optionA = document.getElementById("q1a")
+            var optionB = document.getElementById("q1b")
+            var mark_gui = document.createElement("h3");
+            question_container.appendChild(mark_gui);
+
+            if(optionA.checked == true){
+                mark_gui.textContent = "Correct! (+50)";
+                mark_gui.style = "color: green; padding-left: 100px";
+                score = score + 50;
+                q1_locked_in = true;
+                q1.disabled = true;
+                q1.textContent = "Submitted";
+            }else if (optionB.checked == true){
+                mark_gui.textContent = "Wrong! (+0)";
+                mark_gui.style = "color: red; padding-left: 100px";
+                q1_locked_in = true;
+                q1.disabled = true;
+                q1.textContent = "Submitted";
+            }else{
+                alertDisplay();
+            }
+        } else{
+            var optionA = document.getElementById("q2a")
+            var optionB = document.getElementById("q2b")
+            var mark_gui = document.createElement("h3");
+            question_container.appendChild(mark_gui);
+
+            if(optionA.checked == true && optionB.checked == true){
+                mark_gui.textContent = "Correct! (+50)";
+                mark_gui.style = "color: green; padding-left: 110px";
+                score = score + 50;
+                q2.disabled = true;
+                q2.textContent = "Submitted";
+                q2_locked_in = true;
+            } else if (optionA.checked == true && optionB.checked == false
+                    || optionA.checked == false && optionB.checked == true){
+                mark_gui.textContent = "Half Mark! (+25)";
+                mark_gui.style = "color: yellow; padding-left: 100px";
+                score = score + 25;
+                q2.disabled = true;
+                q2.textContent = "Submitted";
+                q2_locked_in = true;
+            }else{
+                alertDisplay();
+            }
+        }
+    }
+
+    var finish_button = document.getElementById("submitbutton");
+    finish_button.addEventListener("click", () => {displayResult()});
+
+    function displayResult(){
+        if(q1_locked_in == true && q2_locked_in == true){
+            clearInterval(myTimer);
+            var result_display = document.getElementById("QuizResult");
+            var result_text = document.createElement("h4");
+            result_text.textContent = "Result: " + score + "/100";
+            result_display.appendChild(result_text);
+            const waitInterval = setInterval(() => {waitThenChange()}, 1000);
+        } else{
+            alertDisplay();
+        }
+    }
+
+    function alertDisplay(){
+        window.alert("Make Sure All Questions Are Answered");
+    }
+
+    function waitThenChange(){
+        if(time == 0){
+            time = 5;
+            window.location.href = "leaderboard.html";
+            return;
+        } else {
+            time = time - 1;
+        }
+        console.log(time);
+    }
+    
+</script>
+</html>

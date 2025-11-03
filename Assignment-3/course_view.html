@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Course View - LMS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.jpg" alt="LMS Logo" style="width: 100px; height: 100px;">
+        <h1>LMS - Learning Management System</h1>
+    </header>
+    <div>
+        <nav>
+            <a href="index.html">Homepage</a>
+        </nav>
+    </div>
+    <main id="courseviewmain">
+        <termselect>
+            <label for="term">Select Term:</label>
+            <select id="term" name="term">
+                <option value="Winter 2025">Winter 2025</option>
+                <option value="Winter 2024">Winter 2024</option>
+                <option value="Fall 2025">Fall 2025</option>
+                <option value="Fall 2024">Fall 2024</option>
+            </select>
+        </termselect>
+        
+        <section class="Enrolled">
+			<!-- Courses in which the student is enrolled -->
+            <!-- Display Course 1, 2, and 3 in the same line -->
+            <h2>Enrolled Courses</h2>
+            <hr>
+            <table id = "EnrolledTable">
+				<tr id = "row1">
+					<td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: Web Development</p>
+                            <p>Course Code: WD381</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+					<td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: Data Structures</p>
+                            <p>Course Code: DS371</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+                    <td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: DBMS</p>
+                            <p>Course Code: DB346</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+				</tr>
+				<!-- Display Course 4 and 5 in the same line -->
+                <tr id = "row2">
+					<td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: Software Testing</p>
+                            <p>Course Code: ST484</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+					<td>
+						<div>
+                            <img src="course1.jpg" alt="Course 1" width="250">
+                            <p>Course Name: Software Architectures</p>
+                            <p>Course Code: SA396</p>
+                            <a href="attempt_quiz.html">Attempt Quiz</a>
+                        </div>
+					</td>
+				</tr>
+            </table> 
+        </section>
+        
+        <div>
+        </div>
+        <br>
+        <br>
+        <section class="Pending">
+			<!-- Courses in which the student is enrolled -->
+            <!-- Display Course 1, 2, and 3 in the same line -->
+            <h2>Pending Invitations</h2>
+            <hr>
+            <table>
+				<tr>
+					<td>
+                        <div>
+                            <img id = "image" src="course2.jpg" alt="Course 2" width="250">
+                            <p>Course Name: Data Science</p>
+                            <p>Course Code: DS102</p>
+                            <buttoninput>
+                                <button id = "AcceptOne">Accept</button>
+                                <button id = "DeclineOne">Decline</button>
+                            </buttoninput>
+                        </div>
+                    </td> 
+                    <td>
+                        <div>
+                            <img id = "image" src="course2.jpg" alt="Course 2" width="250">
+                            <p>Course Name: Machine Learning</p>
+                            <p>Course Code: ML105</p>
+                            <buttoninput>
+                                <button id = "AcceptTwo">Accept</button>
+                                <button id = "DeclineTwo">Decline</button>
+                            </buttoninput>
+                        </div>
+                    </td> 
+                </tr>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 LMS. All rights reserved.</p>
+    </footer>
+</body>
+<script>
+    var accept_button_one = document.getElementById("AcceptOne");
+    var accept_button_two = document.getElementById("AcceptTwo");
+    accept_button_one.addEventListener("click", () => {add_element(accept_button_one)});
+    accept_button_two.addEventListener("click", () => {add_element(accept_button_two)});
+    
+    var decline_button_one = document.getElementById("DeclineOne");
+    var decline_button_two = document.getElementById("DeclineTwo");
+    decline_button_one.addEventListener("click", () => {remove_element(decline_button_one)});
+    decline_button_two.addEventListener("click", () => {remove_element(decline_button_two)});
+
+    function remove_element(button){
+        var container_decline = button.parentElement.parentElement.parentElement;
+        console.log(container_decline)
+        container_decline.remove();
+    }
+
+    function add_element(button){
+        var table_element = document.getElementById("EnrolledTable");
+        var row1 = document.getElementById("row1");
+        var row2 = document.getElementById("row2");
+        var row_2_length = row2.children.length;
+
+        if (row_2_length < 3){
+            var container_accept = button.parentElement.parentElement.parentElement;
+            var image = button.parentElement.parentElement.children[0];
+            image.src = "course1.jpg";
+
+            const data_node = document.createElement("td");
+            data_node.appendChild(container_accept);
+            row2.appendChild(data_node);
+
+            var container_link = button.parentElement.parentElement;
+            const link_add = document.createElement("a");
+            link_add.href = "attempt_quiz.html";
+            link_add.textContent = "Attempt Quiz";
+            button.parentElement.remove();
+            container_link.appendChild(link_add);
+        } else {
+            var container_accept = button.parentElement.parentElement.parentElement;
+            var image = button.parentElement.parentElement.children[0];
+            image.src = "course1.jpg";
+
+            const row_node = document.createElement("tr");
+            const data_node = document.createElement("td");
+            row_node.appendChild(data_node);
+            data_node.appendChild(container_accept);
+            table_element.appendChild(row_node);
+
+            var container_link = button.parentElement.parentElement;
+            const link_add = document.createElement("a");
+            link_add.href = "attempt_quiz.html";
+            link_add.textContent = "Attempt Quiz";
+            button.parentElement.remove();
+            container_link.appendChild(link_add);
+        }
+    }
+</script>
+</html>
